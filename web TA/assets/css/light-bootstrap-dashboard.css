@@ -2264,6 +2264,13 @@ fieldset[disabled] .btn-neutral.active {
     padding: 15px 15px 0;
 }
 
+.header2{
+  margin-left: 15px;
+}
+.header3{
+  margin-left: 400px;
+}
+
 .card .category,
 .card label {
     font-size: 14px;
