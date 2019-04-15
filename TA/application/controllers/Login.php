@@ -4,7 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
     public function __construct(){
         parent::__construct();
-        $this->load->model('admin_model','mhs_model');
+        $this->load->model('admin_model');
+        $this->load->model('mhs_model');
+        $this->load->model('tingkatan_model');
     }
 
     public function index(){
@@ -32,8 +34,16 @@ class Login extends CI_Controller {
                 $this->session->set_userdata('nama', $check_login->nama);
                 $this->session->set_userdata('tingkatan', $check_login->id_tingkatan);
                 $this->session->set_userdata('id_admin', $check_login->id_admin);
-
-                redirect(base_url('admin/admin1/admin'),'refresh');
+                if (($check_login->id_tingkatan) == 1) {
+                    redirect(base_url('admin/admin1/admin'),'refresh');
+                }elseif (($check_login->id_tingkatan) == 2) {
+                    redirect(base_url('admin/admin2/admin'),'refresh');
+                }elseif (($check_login->id_tingkatan) == 3) {
+                    redirect(base_url('admin/admin3/admin'),'refresh');
+                }else {
+                    redirect(base_url('home/home'),'refresh');
+                }
+                
             }else {
                 $this->session->set_flashdata('sukses','Username/password salah');
                 redirect(base_url('login'),'refresh');

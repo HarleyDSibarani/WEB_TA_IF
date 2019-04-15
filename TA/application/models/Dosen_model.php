@@ -12,7 +12,17 @@ class Dosen_model extends CI_Model {
         return $query->result();
     }
 
+    public function profil(){
+        $query = $this->db->get('dosen');
+        return $query->result();
+    }
+
     public function detail($id_dosen){
+        $query = $this->db->get_where('dosen',array('id_dosen' => $id_dosen));
+        return $query->row();
+    }
+
+    public function read($id_dosen){
         $query = $this->db->get_where('dosen',array('id_dosen' => $id_dosen));
         return $query->row();
     }

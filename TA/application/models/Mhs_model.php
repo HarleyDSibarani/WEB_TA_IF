@@ -10,7 +10,7 @@ class Mhs_model extends CI_Model {
     public function listing(){
         $this->db->select('mahasiswa.*,dosen.nama_dosen');
         $this->db->from('mahasiswa');
-	    $this->db->join('dosen','dosen.id_dosen = mahasiswa.id_dosen','LEFT');
+	    $this->db->join('dosen','dosen.id_dosen = mahasiswa.id_dosen1','LEFT');
         $this->db->order_by('id_mhs','DESC');
         $query = $this->db->get();
         return $query->result();

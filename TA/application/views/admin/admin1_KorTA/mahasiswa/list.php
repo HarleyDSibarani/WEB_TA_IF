@@ -34,8 +34,8 @@
                 <?php  $i=1; foreach($mahasiswa as $mahasiswa) { ?>
                     <tr class="odd gradex">
                         <td><?php echo $i?></td>
-                        <td><?php echo $mahasiswa->foto?></td>
-                        <td><?php echo $mahasiswa->nama?></td>
+                        <td><img src="<?php echo base_url('./assets/upload/mhs/image/thumbs/'.$mahasiswa->foto)?>" class="img img-responsive img-thumbnail" width="60"></td>
+                        <td><?php echo $mahasiswa->nama_mhs?></td>
                         <td><?php echo $mahasiswa->username?></td>
                         <td><?php echo $mahasiswa->nim?></td>
                         <td><?php echo $mahasiswa->email?></td>
@@ -45,7 +45,7 @@
                         <td><?php echo $mahasiswa->tgl_seminar?></td>
                         <td><?php echo $mahasiswa->tgl_sidang?></td>
                         <td>
-                            <a href="<?php echo base_url('admin/admin1/mahasiswa/edit/'.$mahasiswa->id_mhs) ?>"class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?php echo base_url('admin/admin1/mahasiswa/edit/'.$mahasiswa->id_mhs) ?>"class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <?php include('hapus.php'); ?>
                         </td>
                     </tr>

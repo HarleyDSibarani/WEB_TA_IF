@@ -31,7 +31,7 @@
                         <td><?php echo $admin->username?></td>
                         <td><?php echo $admin->nama_tingkatan?></td>
                         <td>
-                            <a href="<?php echo base_url('admin/admin1/admin/edit/'.$admin->id_admin) ?>"class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?php echo base_url('admin/admin1/admin/edit/'.$admin->id_admin) ?>"class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <?php include('hapus.php'); ?>
                         </td>
                     </tr>

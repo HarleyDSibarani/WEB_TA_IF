@@ -11,27 +11,59 @@ $admin_aktif = $this->admin_model->detail($id_admin);
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="<?php echo base_url('admin/admin1/admin') ?>" class="simple-text">
+                <a href="<?php
+                    if(($admin_aktif->id_tingkatan) == 1 ){
+                        echo base_url('admin/admin1/admin');
+                    }elseif(($admin_aktif->id_tingkatan) == 2 ){
+                        echo base_url('admin/admin2/admin');
+                    }elseif (($admin_aktif->id_tingkatan) == 3 ) {
+                        echo base_url('admin/admin3/admin');
+                    }
+                        ?>" class="simple-text">
                     <?php echo $admin_aktif->nama ?>
                 </a>
             </div>
 
             <ul class="nav">
-                <li class="active">
-                    <a href="<?php echo base_url('admin/admin1/admin') ?>">
+                <li>
+                    <a href="<?php 
+                        if(($admin_aktif->id_tingkatan) == 1 ){
+                            echo base_url('admin/admin1/admin');
+                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
+                            echo base_url('admin/admin2/admin');
+                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
+                            echo base_url('admin/admin3/admin');
+                        }
+                    ?>">
                         <i class="pe-7s-graph"></i>
                         <p>Data Admin</p>
                         
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/admin1/dosen_pembimbing') ?>">
+                    <a href="<?php 
+                        if(($admin_aktif->id_tingkatan) == 1 ){
+                            echo base_url('admin/admin1/dosen_pembimbing');
+                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
+                            echo base_url('admin/admin2/dosen_pembimbing');
+                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
+                            echo base_url('admin/admin3/dosen_pembimbing');
+                        }
+                    ?>">
                         <i class="pe-7s-user"></i>
-                        <p>Data Dosen</p>
+                        <p>Data Dosen Pemimbing</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('admin/admin1/mahasiswa') ?>">
+                    <a href="<?php 
+                        if(($admin_aktif->id_tingkatan) == 1 ){
+                            echo base_url('admin/admin1/mahasiswa');
+                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
+                            echo base_url('admin/admin2/mahasiswa');
+                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
+                            echo base_url('admin/admin3/mahasiswa');
+                        }
+                    ?>">
                         <i class="pe-7s-note2"></i>
                         <p>Data Mahasiswa</p>
                     </a>
@@ -92,12 +124,6 @@ $admin_aktif = $this->admin_model->detail($id_admin);
                                 <li><a href="#">Another notification</a></li>
                               </ul>
                         </li>
-                        <li>
-                           <a href="">
-                                <i class="fa fa-search"></i>
-								<p class="hidden-lg hidden-md">Search</p>
-                            </a>
-                        </li>
                     </ul>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -111,10 +137,20 @@ $admin_aktif = $this->admin_model->detail($id_admin);
                         </li>
 
                         <li>
-                           <a href="" class="btn btn-success square-btn-adjust">
-                               <p> <?php echo $admin_aktif->nama ?> ( Admin Level : <?php echo $admin_aktif->id_tingkatan ?> ) </p>
+                           <a class="btn btn-success square-btn-adjust">
+                               <p><?php echo $admin_aktif->nama ?> ( <?php 
+                                    if(($admin_aktif->id_tingkatan) == 1 ){
+                                        echo "Kordinator TA";
+                                    }elseif (($admin_aktif->id_tingkatan) == 2 ) {
+                                        echo "Sekertaris Kordinator TA";
+                                    }elseif (($admin_aktif->id_tingkatan) == 3 ) {
+                                        echo "Dosen Pembimbing";
+                                    }else{
+                                        echo "Mahasiswa";
+                                    } ?> )
+                                </p>
                             </a>
-                        </li>
+                        </li>   
 
                         <li>
                             <a href="<?php echo base_url('login/logout')?>" class="btn btn-danger square-btn-adjust">
