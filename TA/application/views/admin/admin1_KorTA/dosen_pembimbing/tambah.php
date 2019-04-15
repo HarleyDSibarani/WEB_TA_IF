@@ -1,7 +1,7 @@
 <?php
   echo validation_errors('<div class="alert alert-warning">','</div>');
 
-  echo form_open(base_url('admin/admin1/dosen_pembimbing/tambah'));
+  echo form_open_multipart(base_url('admin/admin1/dosen_pembimbing/tambah'));
   
 ?>
 <div class="card">
@@ -41,6 +41,13 @@
         <div class="form-group form-group-md">
             <label>Beban Bimbingan</label>
             <input type="text" name="beban" class="form-control" placeholder="Masukkan Beban Bimbingan" required>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group form-group-md">
+            <label>Foto</label>
+            <input type="file" name="foto" class="form-control" required>
         </div>
     </div>
 

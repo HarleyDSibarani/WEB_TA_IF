@@ -3,7 +3,7 @@
 <div class="col-md-12">
     <div class="card">
         <div class="header">
-            <h4 class="title">Data Dosen</h4>
+            <h4 class="title">Data Dosen Pembimbing</h4>
             <p><a href="<?php echo base_url('admin/admin1/dosen_pembimbing/tambah') ?>" class="btn btn-primary">
             <i class="fa fa-plus"></i>Tambah</a></p>
         </div>
@@ -30,14 +30,14 @@
                 <?php  $i=1; foreach($dosen as $dosen) { ?>
                     <tr class="odd gradex">
                         <td><?php echo $i?></td>
-                        <td><?php echo $dosen->foto?></td>
+                        <td><img src="<?php echo base_url('./assets/upload/dosen/image/thumbs/'.$dosen->foto)?>" class="img img-responsive img-thumbnail" width="60"></td>
                         <td><?php echo $dosen->nama_dosen?></td>
                         <td><?php echo $dosen->nip?></td>
                         <td><?php echo $dosen->email?></td>
                         <td><?php echo $dosen->keterangan?></td>
                         <td><?php echo $dosen->beban?></td>
                         <td>
-                            <a href="<?php echo base_url('admin/admin1/dosen_pembimbing/edit/'.$dosen->id_dosen) ?>"class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                            <a href="<?php echo base_url('admin/admin1/dosen_pembimbing/edit/'.$dosen->id_dosen) ?>"class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>
                             <?php include('hapus.php'); ?>
                         </td>
                     </tr>

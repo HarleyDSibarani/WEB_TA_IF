@@ -21,7 +21,7 @@
 
 <body id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger">
+    <a class="navbar-brand js-scroll-trigger" >
       <img class="d-block d-lg-none img-thumbnail rounded-circle" width="60" src="<?php echo base_url('./assets/upload/dosen/image/thumbs/'.$dosen->foto) ?>">
       <span class="d-none d-lg-block">
         <img class="img-thumbnail img-profile rounded-circle mx-auto mb-2" src="<?php echo base_url('./assets/upload/dosen/image/thumbs/'.$dosen->foto) ?>">
@@ -62,7 +62,7 @@
                         <th>Tanggal Sidang</th>
                     </thead>
                     <tbody>
-                        <td>1</td>
+                        <td><a href="<?php echo base_url('  mhs')?>">asd</a></td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>

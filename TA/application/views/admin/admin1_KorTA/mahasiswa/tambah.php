@@ -1,7 +1,6 @@
 <?php
   echo validation_errors('<div class="alert alert-warning">','</div>');
-
-  echo form_open(base_url('admin/admin1/mahasiswa/tambah'));
+  echo form_open_multipart(base_url('admin/admin1/mahasiswa/tambah'));
   
 ?>
 <div class="card">
@@ -82,6 +81,13 @@
         <div class="form-group form-group-md">
             <label>Tanggal Sidang</label>
             <input type="text" name="tgl_sidang" class="form-control" placeholder="Tanggal Sidang">
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="form-group form-group-md">
+            <label>Foto Profil</label>
+            <input type="file" name="foto" class="form-control" required>
         </div>
     </div>
 

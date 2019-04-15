@@ -1,4 +1,4 @@
-<button class="btn btn-primary btn-sm" data-toggle="modal"
+<button class="btn btn-danger btn-sm" data-toggle="modal"
         data-target="#myModal<?php echo $dosen->id_dosen ?>"
         title="Hapus dosen">
         <i class="fa fa-trash-o"></i>

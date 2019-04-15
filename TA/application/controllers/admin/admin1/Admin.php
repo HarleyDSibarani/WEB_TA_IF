@@ -26,8 +26,7 @@ class Admin extends CI_Controller {
                             array('required' => 'Nama Harus Diisi'));
         $valid->set_rules('username','Username','required|is_unique[admin.username]',
                             array('required'  => 'username Harus Diisi',
-                                  'is_unique' => 'Username <Strong>'.$this->input->post('username').'/Strong Sudah Ada. Buat Username Baru'
-                                ));
+                                  'is_unique' => 'Username <Strong>'.$this->input->post('username').'/Strong Sudah Ada. Buat Username Baru'));
         $valid->set_rules('password','Password','required|max_length[16]|min_length[8]',
                             array('required'    => 'Password Harus Diisi',
                                   'min_length'  => 'Password Minimal 8 karakter',
@@ -36,17 +35,16 @@ class Admin extends CI_Controller {
                             array('required'    => 'Tingkatan Harus Diisi'));
 
         if ($valid->run()===FALSE) {
-			    $data = array('title'   => 'Tambah Data Admin',
-                              'admin'   => $admin,
-                              'tingkatan'=> $tingkatan,
-                              'isi'     => 'admin/admin1_KorTA/dasbor/tambah'
+			    $data = array('title'       => 'Tambah Data Admin',
+                              'admin'       => $admin,
+                              'tingkatan'   => $tingkatan,
+                              'isi'         => 'admin/admin1_KorTA/dasbor/tambah'
                             );
 			     $this->load->view('admin/layout/wrapper',$data);
         }else {
             $i    = $this->input;
             $data = array('nama'            => $i->post('nama'),
                           'username'        => $i->post('username'),
-                          'nip'             => $i->post('nip'),
                           'password'        => sha1($i->post('password')),
                           'id_tingkatan'    => $i->post('tingkatan')
                         );

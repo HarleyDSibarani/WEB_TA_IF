@@ -19,7 +19,7 @@
     <div class="col-md-6">
         <div class="form-group form-group-md">
             <label>Username</label>
-            <input type="text" name="username" class="form-control" placeholder="Masukkan Username" value="<?php echo $admin->username ?>" readonly disable required>
+            <input type="text" name="username" class="form-control" placeholder="Masukkan Username" value="<?php echo $admin->username ?>" readonly disable   required>
         </div>
     </div>
 
