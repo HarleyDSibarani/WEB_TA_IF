@@ -4,17 +4,12 @@
 
 <head>
 
-  <title><?php echo $dosen->nama_dosen ?></title>
+  <title><?php echo $dosen->nama_dospem ?></title>
 
-  <!-- Bootstrap core CSS -->
   <link href="<?php echo base_url() ?>assets/admin/css/bootstrap.min.1.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
   <link href="<?php echo base_url() ?>assets/admin/css/all.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
   <link href="<?php echo base_url() ?>assets/admin/css/resume.min.css" rel="stylesheet">
 
 </head>
@@ -33,7 +28,7 @@
     <div class="collapse navbar-collapse"  id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger"><?php echo $dosen->nama_dosen ?></a>
+          <a class="nav-link js-scroll-trigger"><?php echo $dosen->nama_dospem ?></a>
         </li>
       </ul>
     </div>
@@ -42,7 +37,7 @@
   <div class="container-fluid p-0">
     <section class="resume-section p-3 p-lg-5 d-flex" id="about">
         <div class="w-100">
-        <h3 class="text-muted"><?php echo $dosen->nama_dosen ?> ( <?php echo $dosen->nip ?> )</h3>
+        <h3 class="text-muted"><?php echo $dosen->nama_dospem ?> ( <?php echo $dosen->nip ?> )</h3>
         <h4 class="text-muted"><?php echo $dosen->email ?></h4><br>
         <h4 class="text-primary"><?php echo $dosen->keterangan?></h4>
         <br><br>
@@ -62,7 +57,7 @@
                         <th>Tanggal Sidang</th>
                     </thead>
                     <tbody>
-                        <td>1</td>
+                        <td>asdasd</td>
                         <td>2</td>
                         <td>3</td>
                         <td>4</td>
