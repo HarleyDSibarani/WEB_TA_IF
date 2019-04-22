@@ -13,15 +13,8 @@ class Bimbingan extends CI_Controller {
 		$this->load->view('home/bimbingan',$data);
 	}
 
-	public function read1($id_dospem1){
-		$dosen = $this->dosen_model->read1($id_dospem1);
-
-		$data = array( 'dosen'    => $dosen );
-		$this->load->view('home/bimbingan',$data);
-	}
-	
-	public function read2($id_dospem2){
-		$dosen = $this->dosen_model->read2($id_dospem2);
+	public function read($id_dosen){
+		$dosen = $this->dosen_model->read($id_dosen);
 
 		$data = array( 'dosen'    => $dosen );
 		$this->load->view('home/bimbingan',$data);

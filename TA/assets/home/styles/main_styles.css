@@ -110,8 +110,8 @@ p a:hover::after
 }
 ::selection
 {
-	background: #ffffff;
-	color: rgb(0, 0, 0);
+	background: #32f996;
+	color: #FFFFFF;
 }
 p::selection
 {
@@ -119,8 +119,8 @@ p::selection
 }
 h1{font-size: 48px;}
 h2{font-size: 36px;}
-h3{font-size: 24px;color: blue;}
-h4{font-size: 18px;color: blue;}
+h3{font-size: 24px;}
+h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
@@ -238,13 +238,6 @@ section
 .nopadding
 {
 	padding: 0px !important;
-}
-
-.clock2{ 
-    padding: 50px 25px 25px 25px;
-    color: #333333;
-    text-align: center;
-    font-size: 35px;
 }
 .button
 {

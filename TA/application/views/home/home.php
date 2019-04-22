@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="http://localhost/TA/assets/admin/img/favicon.ico">  
+  <link rel="icon" type="image/png" href="http://localhost/TA/assets/admin/img/favicon.ico">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/home/css/business-frontpage.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/calendar/js/jsCalendar.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/calendar/css/jsCalendar.darkseries.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/Home/css/style.css">
 
 </head>
 
@@ -65,11 +66,11 @@
                     <h6 class="card-text fa-md text-center text-primary"><?php echo $dospem1->nip ?></h6>
                     <h6 class="card-text fa-md text-center text-primary"><?php echo $dospem1->email ?></h6>
                     <p class="card-text font-weight-bold text-center text-primary">Jumlah Beban Bimbingan : <?php echo $dospem1->beban ?></p>
-                    <p class="card-text fa-md text-center text-primary"><?php echo $dospem1->keterangan ?></p>																
+                    <p class="card-text fa-md text-center text-primary"><?php echo $dospem1->keterangan ?></p>
                   </div>
-                </div>	
+                </div>
               </div>
-            <?php $i++; } ?> 
+            <?php $i++; } ?>
             </div>
           </div>
           <br>
@@ -86,11 +87,11 @@
                     <h6 class="card-text fa-md text-center text-primary"><?php echo $dospem2->nip ?></h6>
                     <h6 class="card-text fa-md text-center text-primary"><?php echo $dospem2->email ?></h6>
                     <p class="card-text font-weight-bold text-center text-primary">Jumlah Beban Bimbingan : <?php echo $dospem2->beban ?></p>
-                    <p class="card-text fa-md text-center text-primary"><?php echo $dospem2->keterangan ?></p>																
+                    <p class="card-text fa-md text-center text-primary"><?php echo $dospem2->keterangan ?></p>
                   </div>
                 </div>
               </div>
-            <?php $i++; } ?> 
+            <?php $i++; } ?>
             </div>
           </div>
       </div>
@@ -138,7 +139,33 @@
           </div>
         </div><!-- /.card -->
         <div class="card border-primary mb-4">
-          <div class="card-body auto-jsCalendar grey-theme" style="left:12%;"></div>
+          <div class="card-body auto-jsCalendar grey-theme" style="left:12%;">
+            <html>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            	<body>
+            		<div class="bla">
+            			<table class="table1">
+            			<tr>
+            				<th>Tanggal</th>
+            				</tr>
+            			<tr>
+            				<td><div><a href="#popup">20-11-1997</a></div>
+
+                <div id="popup">
+                	<div class="window">
+                    	<a href="#" class="close-button" title="Close">X</a>
+                        <h3>Tanggal : 20-11-1997</h3>
+                        <h3>Nama Mahasiswa : Ucok Pardamean</h3>
+                        <h3>Judul TA : Cara Berbuat Baik</h3>
+                        <h3>Dosen : Butet Parbada</h3>
+                        <h3>Ruangan : E311</h3>
+                    </div>
+                </div>
+            		</table>
+            		</div>
+            	</body>
+            </html>
+          </div>
         </div>
       </div>
     </div>
@@ -156,7 +183,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  
+
   <script src="<?php echo base_url() ?>assets/calendar/js/jsCalendar.js"></script>
   <script src="<?php echo base_url() ?>assets/calendar/js/jsCalendar.lang.de.js"></script>
   <script src="<?php echo base_url() ?>assets/home/vendor/jquery/jquery.min.js"></script>

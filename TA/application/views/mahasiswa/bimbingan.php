@@ -4,7 +4,7 @@
 
 <head>
 
-  <title><?php echo $dosen->nama_dospem ?></title>
+  <title><?php echo $dosen->nama_dosen ?></title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo base_url() ?>assets/admin/css/bootstrap.min.1.css" rel="stylesheet">
@@ -12,7 +12,7 @@
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="<?php echo base_url() ?>assets/admin/css/light-bootstrap-dashboard.css?v=2.0.1" rel="stylesheet"/>
+  <link href="<?php echo base_url() ?>assets/admin/css/all.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="<?php echo base_url() ?>assets/admin/css/resume.min.css" rel="stylesheet">
@@ -33,51 +33,45 @@
     <div class="collapse navbar-collapse"  id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger"><?php echo $dosen->nama_dospem ?></a>
+          <a class="nav-link js-scroll-trigger"><?php echo $dosen->nama_dosen ?></a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid p-0">
-    <section class="resume-section p-3 p-lg-auto d-flex" id="about">
+    <section class="resume-section p-3 p-lg-5 d-flex" id="about">
         <div class="w-100">
-        <h3 class="text-muted"><?php echo $dosen->nama_dospem ?> ( <?php echo $dosen->nip ?> )</h3>
+        <h3 class="text-muted"><?php echo $dosen->nama_dosen ?> ( <?php echo $dosen->nip ?> )</h3>
         <h4 class="text-muted"><?php echo $dosen->email ?></h4><br>
         <h4 class="text-primary"><?php echo $dosen->keterangan?></h4>
         <br><br>
         <h3 class="title text-primary text-center">Beban Bimbingan</h3>
-            <div class=" content table-responsive-xl ">
-                <table class="table table-hover table-striped"style="padding-right:50px" >
+            <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
                     <thead>
                         <th>#</th>
-                        <th>Nama Lengkap</th>
+                        <th>Foto</th>
+                        <th>Nama</th>
                         <th>NIM</th>
                         <th>Judul Tugas Akhir</th>
                         <th>Angkatan</th>
-                        <th>Dosen Wali</th>
-                        <th>Dosen Pembimbing 1</th>
-                        <th>Dosen Pembimbing 2</th>
+                        <th>Dosen Pembimbing</th>
                         <th>Tanggal Daftar</th>
                         <th>Tanggal Seminar</th>
                         <th>Tanggal Sidang</th>
                     </thead>
-                    <tbody> 
-                      <?php  $i=1; foreach($daftar as $bimbingan) { ?>
-                        <tr class="odd gradex">
-                            <td><?php echo $i?></td>
-                            <td><?php echo $bimbingan->nama_mhs?></td>
-                            <td><?php echo $bimbingan->nim?></td>
-                            <td><?php echo $bimbingan->judul?></td>
-                            <td><?php echo $bimbingan->angkatan?></td>
-                            <td><?php echo $bimbingan->nama_dosen_wali?></td>
-                            <td><?php echo $bimbingan->nama_dospem?></td>
-                            <td><?php echo $bimbingan->nama_dospem?></td>
-                            <td><?php echo $bimbingan->tgl_daftar?></td>
-                            <td><?php echo $bimbingan->tgl_seminar?></td>
-                            <td><?php echo $bimbingan->tgl_sidang?></td>
-                        </tr>
-                      <?php $i++; } ?> 
+                    <tbody>
+                        <td><a href="<?php echo base_url('  mhs')?>">asd</a></td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
                     </tbody>
                 </table>
             </div>
