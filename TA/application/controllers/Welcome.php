@@ -23,8 +23,11 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index(){
-		$dosen = $this->dosen_model->listing();
-        $data = array(  'dosen'     => $dosen,
+		$dosen = $this->dosen_model->list_dospem1();
+		$dosen1 = $this->dosen_model->list_dospem2();
+		$data = array(  'title'					 => 'Sistem Informasi Management Tugas Akhir',
+						'dosen_pembimbing_1'     => $dosen,
+						'dosen_pembimbing_2'     => $dosen1
                         );
 		$this->load->view('home/home',$data);
 	}
