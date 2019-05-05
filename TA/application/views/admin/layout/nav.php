@@ -11,67 +11,53 @@ $admin_aktif = $this->admin_model->detail($id_admin);
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="<?php
-                    if(($admin_aktif->id_tingkatan) == 1 ){
-                        echo base_url('admin/admin1/admin');
-                    }elseif(($admin_aktif->id_tingkatan) == 2 ){
-                        echo base_url('admin/admin2/admin');
-                    }elseif (($admin_aktif->id_tingkatan) == 3 ) {
-                        echo base_url('admin/admin3/admin');
-                    }
-                        ?>" class="simple-text">
+                <a href="<?php echo base_url('admin/admin') ?>" class="simple-text">
                     <?php echo $admin_aktif->nama ?>
                 </a>
             </div>
 
             <ul class="nav">
                 <li>
-                    <a href="<?php 
-                        if(($admin_aktif->id_tingkatan) == 1 ){
-                            echo base_url('admin/admin1/admin');
-                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
-                            echo base_url('admin/admin2/admin');
-                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
-                            echo base_url('admin/admin3/admin');
-                        }
-                    ?>">
+                    <a href="<?php echo base_url('admin/admin') ?>">
                         <i class="pe-7s-graph"></i>
-                        <p>Data Admin</p>
+                        <p>Administrator</p>
                         
                     </a>
                 </li>
                 <li>
-                    <a href="<?php 
-                        if(($admin_aktif->id_tingkatan) == 1 ){
-                            echo base_url('admin/admin1/dosen_pembimbing');
-                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
-                            echo base_url('admin/admin2/dosen_pembimbing');
-                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
-                            echo base_url('admin/admin3/dosen_pembimbing');
-                        }
-                    ?>">
+                    <a href="<?php echo base_url('admin/dosen_pembimbing_1') ?>">
                         <i class="pe-7s-user"></i>
-                        <p>Data Dosen Pemimbing</p>
+                        <p>Dosen Pemimbing 1</p>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php 
-                        if(($admin_aktif->id_tingkatan) == 1 ){
-                            echo base_url('admin/admin1/mahasiswa');
-                        }elseif(($admin_aktif->id_tingkatan) == 2 ){
-                            echo base_url('admin/admin2/mahasiswa');
-                        }elseif (($admin_aktif->id_tingkatan) == 3 ) {
-                            echo base_url('admin/admin3/mahasiswa');
-                        }
-                    ?>">
+                    <a href="<?php echo base_url('admin/dosen_pembimbing_2') ?>">
+                        <i class="pe-7s-user"></i>
+                        <p>Dosen Pemimbing 2</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('admin/dosen_wali') ?>">
+                        <i class="pe-7s-user"></i>
+                        <p>Dosen Wali</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo base_url('admin/mahasiswa') ?>">
                         <i class="pe-7s-note2"></i>
-                        <p>Data Mahasiswa</p>
+                        <p>Mahasiswa Tugas Akhir</p>
                     </a>
                 </li>
                 <li>
                     <a href="schedule.html">
                         <i class="pe-7s-note2"></i>
                         <p>Jadwal Bimbingan</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="schedule.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Persyaratan</p>
                     </a>
                 </li>
                 <li>
