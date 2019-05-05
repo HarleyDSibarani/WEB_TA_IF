@@ -95,6 +95,7 @@
             </div>
           </div>
       </div>
+
       <div class="col-md-4 mb-auto  border border-secondary">
 				<br>
 				<aside class="sidebar">
@@ -138,18 +139,26 @@
               </div>
           </div>
         </div><!-- /.card -->
+
         <div class="card border-primary mb-4">
-          <div class="card-body auto-jsCalendar grey-theme" style="left:12%;">
-            <html>
             <link rel="stylesheet" type="text/css" href="style.css">
-            	<body>
-            		<div class="bla">
-            			<table class="table1">
-            			<tr>
-            				<th>Tanggal</th>
-            				</tr>
-            			<tr>
-            				<td><div><a href="#popup">20-11-1997</a></div>
+            <aside class="sidebar">
+              <div class="table1">
+                   <table>
+                  <tr>
+                    <th bgcolor="#007bff">Tanggal</th>
+                    </tr>
+                  <tr>
+                    <td>
+                      <div><a href="#popup">20-11-2019</a></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </aside>
+    </div>    
+
 
                 <div id="popup">
                 	<div class="window">
@@ -161,17 +170,6 @@
                         <h3>Ruangan : E311</h3>
                     </div>
                 </div>
-            		</table>
-            		</div>
-            	</body>
-            </html>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    <!-- /.row -->
-    <!-- /.row -->
   </div>
   <!-- /.container -->
   <!-- Footer -->
